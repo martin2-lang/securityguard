@@ -1,0 +1,16 @@
+# Backend (Maven)
+backend/target/
+
+# Frontend (Node)
+frontend/node_modules/
+frontend/dist/
+
+# Secretos y archivos locales
+.env
+*.env.local
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

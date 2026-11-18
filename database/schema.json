@@ -1,0 +1,28 @@
+{
+  "database": "securityguard",
+  "collection": "vulnerabilities",
+  "schema": {
+    "_id": "ObjectId (auto-generated)",
+    "title": "String - required",
+    "description": "String",
+    "level": "String - enum: [CRITICO, ALTO, MEDIO, BAJO]",
+    "cvss": "Number - range: 0.0 to 10.0",
+    "status": "String - enum: [Pendiente, En Progreso, Mitigado]",
+    "date": "Date - ISO 8601",
+    "recommendation": "String"
+  },
+  "example_document": {
+    "title": "Credenciales por Defecto",
+    "description": "Uso de credenciales inseguras en dispositivos de red.",
+    "level": "CRITICO",
+    "cvss": 9.8,
+    "status": "Pendiente",
+    "date": "2024-01-15",
+    "recommendation": "Cambiar contraseñas por defecto de inmediato."
+  },
+  "indexes": [
+    { "field": "_id", "type": "unique" },
+    { "field": "level", "type": "index" },
+    { "field": "status", "type": "index" }
+  ]
+}
